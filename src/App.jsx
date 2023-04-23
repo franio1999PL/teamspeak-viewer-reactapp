@@ -9,33 +9,6 @@ export default function App () {
   const [onlineNumber, setOnlineNumber] = useState(0)
   const [data, setData] = useState(null)
 
-  // useEffect(() => {
-  //   const fetchData = () => {
-  //     axios
-  //       .get('https://api.gots.lol/users')
-  //       .then(response => {
-  //         setData(response.data)
-  //         setOnlineNumber(response.data.TeamspeakServer.Online)
-  //       })
-  //       .catch(error => {
-  //         console.log(error)
-  //       })
-  //   }
-
-  //   // Pobranie danych z API na początku
-  //   fetchData()
-
-  //   // Aktualizacja danych co 5 sekund
-  //   const intervalId = setInterval(() => {
-  //     fetchData()
-  //   }, 5000)
-
-  //   // Czyszczenie interwału po zakończeniu efektu
-  //   return () => clearInterval(intervalId)
-  // }, [])
-
-  // console.log(data)
-
   return (
     <QueryClientProvider client={queryClient}>
       <Example />
